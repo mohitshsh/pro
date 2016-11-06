@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 5-Nov-2016 6:26:09 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="Entity.Reservation" table="reservation" catalog="seccharge" optimistic-lock="version">
+        <id name="idReservation" type="int">
+            <column name="idReservation" />
+            <generator class="assigned" />
+        </id>
+        <property name="csPortid" type="java.lang.Integer">
+            <column name="CS_PORTID" />
+        </property>
+        <property name="csNumber" type="java.lang.Integer">
+            <column name="CS_NUMBER" />
+        </property>
+        <property name="reservDate" type="date">
+            <column name="RESERV_DATE" length="10" />
+        </property>
+        <property name="reserveStartTime" type="string">
+            <column name="RESERVE_START_TIME" length="45" />
+        </property>
+        <property name="reserveEndTime" type="string">
+            <column name="RESERVE_END_TIME" length="45" />
+        </property>
+        <property name="porttype" type="string">
+            <column name="PORTTYPE" length="45" />
+        </property>
+        <property name="csSiteid" type="string">
+            <column name="CS_SITEID" length="45" />
+        </property>
+        <property name="electricalVehicleid" type="string">
+            <column name="ELECTRICAL_VEHICLEID" length="45" />
+        </property>
+        <property name="reservestatus" type="string">
+            <column name="RESERVESTATUS" length="45" />
+        </property>
+        <property name="timecreated" type="string">
+            <column name="TIMECREATED" length="45" />
+        </property>
+        <property name="timecancelation" type="string">
+            <column name="TIMECANCELATION" length="45" />
+        </property>
+        <property name="reserveprice" type="string">
+            <column name="RESERVEPRICE" length="45" />
+        </property>
+        <property name="reservetax" type="string">
+            <column name="RESERVETAX" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
